@@ -31,8 +31,22 @@ const ProductsContextProvider = (props) => {
     }
   ]);
 
+  const toggleFavorite = (productId) => {
+    setProducts(currentProducts => {
+      const prodIndex = currentProducts.findIndex(p => p.id === productId);
+      const newFavStatus = !currentProducts[prodIndex].isFavorite;
+      const updatedProducts = [...currentProducts];
+      updatedProducts[prodIndex] = {
+        ...currentProducts[prodIndex],
+        isFavorite: newFavStatus,
+      };
+      return updatedProducts;
+    });
+  };
+
   const value = {
-    products: products
+    products,
+    toggleFavorite,
   };
   
   return (
