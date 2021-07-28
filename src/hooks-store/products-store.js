@@ -13,6 +13,7 @@ const configureStore = () => {
       return { products: curState.products }
     }
   };
+
   initStore(actions, {
     products: [
       {
