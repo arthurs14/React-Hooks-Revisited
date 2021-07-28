@@ -2,13 +2,13 @@ import React from 'react';
 
 import Card from '../UI/Card';
 import './ProductItem.css';
-import { useProducts } from '../../context/products-context';
+// import { useProducts } from '../../context/products-context';
 
 const ProductItem = props => {
-  const { toggleFavorite } = useProducts();
+  // const { toggleFavorite } = useProducts();
 
   const toggleFavHandler = () => {
-    toggleFavorite(props.id);
+    // toggleFavorite(props.id);
   };
 
   return (
